@@ -31,8 +31,8 @@ def can_be_created_in_a_block(hash = {title: "", release_date: ""})
   # release_date == 1990
 
   Movie.create do |m|
-    m.title = "Home Alone"
-    m.release_date = 1990
+    m.title = hash[:title]
+    m.release_date = hash[:release_date]
     m.director = :director
     m.lead = :lead
     m.in_theaters = :in_theaters
